@@ -5,4 +5,4 @@ format: jb-book
 root: intro
 chapters:
 - file: markdown
-- file: hw/new/hw06-shishi00/index.ipynb
+- file: index.ipynb
