@@ -26,7 +26,9 @@ def test_reqshift():
     
 def test_plot(): 
     """Test if a plot exists"""
-    assert utils.plot(
+    utils.plot(1, 1, 1, 1, False, 1, 1, 1, 1, 1, 1, 1, 1, str(1), str(1), 'png')
+    assert exists('figures/' + "1_1"+"_matchtime.png")
+
     
 
         

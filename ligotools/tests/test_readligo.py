@@ -1,12 +1,16 @@
-def test_read_hdf5():
-    assert 1==1
+from ligotools.utils import *
+from ligotools import readligo as rl
+from ligotools.readligo import *
+import json
+
 
 def test_loaddata():
-    assert 1==1 
-
-def test_dq2segs():
-    assert 1==1
-
-def test_dq_channel_to_seglist():
-    assert 1==1
+    fnjson = "data/BBH_events_v3.json"
+    events = json.load(open(fnjson,"r")) 
+    eventname = 'GW150914' 
+    event = events[eventname]
+    fn_H1 = event['fn_H1'] 
+    
+    strain_H1, time_H1, chan_dict_H1 = rl.loaddata('data/' + fn_H1, 'H1')
+    assert len(strain_H1) == 131072
 
