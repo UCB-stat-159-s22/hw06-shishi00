@@ -1,6 +1,7 @@
 import numpy as np
 from scipy.io import wavfile
 import matplotlib.pyplot as plt
+from scipy.interpolate import interp1d
 
 # function to whiten data
 def whiten(strain, interp_psd, dt):

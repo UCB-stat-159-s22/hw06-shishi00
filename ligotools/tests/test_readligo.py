@@ -1,8 +1,5 @@
-from ligotools.utils import *
-from ligotools import readligo as rl
-from ligotools.readligo import *
 import json
-
+from ligotools import readligo as rl
 
 def test_loaddata():
     fnjson = "data/BBH_events_v3.json"
